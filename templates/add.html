@@ -1,0 +1,18 @@
+{% extends 'major.html' %}
+
+{% block title %}
+    <title>Добавление товара в корзину</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1> Тут можно добавить товар в корзину </h1>
+    <form method="post">
+        <input type="text" class="form-control" name="name" id="name" placeholder="Что бы Вы хотели найти?">
+        <input type="text" class="form-control" name="view" id="view" placeholder="Для кого? Мужское, женское или детское?">
+        <input type="text" class="form-control" name="seasons" id="seasons" placeholder="На какой сезон?">
+        <input type="number" class="form-control" name="price" id="price" placeholder="За какую стоимость?">
+        <button class="btn btn-success" type="submit">Применить</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'major.html' %}
+
+{% block title %}
+    <title>Home</title>
+{% endblock %}
+
+{% block body %}
+<main>
+    {% for el in data %}
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+   <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+          <h2 class="display-5">{{ el.name }}</h2>
+          <p class="lead">{{ el.view }}</p>
+          <p class="lead">{{ el.price }}</p>
+          <p class="lead">{{ el.seasons }}</p>
+          <a href="/buy/{{ el.id }}" class="btn btn-lg btn-block btn-outline-primary">Купить товар</a>
+      </div>
+    </div>
+       {% endfor %}
+   </div>
+</main>
+{% endblock %}
